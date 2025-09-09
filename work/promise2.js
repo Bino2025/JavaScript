@@ -15,4 +15,4 @@ let myPromise = new Promise((resolve, reject) => {
 myPromise
     .then(result => console.log(result))
     .catch(error => console.log(error))
-    .finally(() => console.log(" Promise executionfinished!"));
+    .finally(() => console.log(" Promise execution finished!"));

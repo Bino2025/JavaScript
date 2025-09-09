@@ -1,0 +1,3 @@
+// built in fxns
+// increases code readability 
+// optimize and reliable

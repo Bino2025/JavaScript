@@ -1,0 +1,8 @@
+the spread operator (...) in js is used to spread out the elements of an array 
+or the properties of an object
+
+
+                    or
+
+
+copy the exact element in array

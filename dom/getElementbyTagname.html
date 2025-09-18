@@ -1,0 +1,29 @@
+<!--  select all elements with a specific html tag-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>para</p>
+    <p>para</p>
+    <p>para</p>
+    <h3>paara</h3>
+
+
+
+    <script>
+        const paragraph = document.getElementsByTagName("p");
+        console.log(paragraph);
+
+        for (let i = 0; i < paragraph; i++) {
+            paragraph[i].style.color = "red";
+        }
+    </script>
+</body>
+
+</html>

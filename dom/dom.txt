@@ -1,0 +1,4 @@
+document object model----DOM
+DOM is a programming interface provided by the browser
+it allows js to interact with access and manipulate the structure and the content of a webpage
+programming interface=that allow software to interact with system or document

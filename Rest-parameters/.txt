@@ -1,0 +1,1 @@
+the rest parameters allows a fn to accept infinite num of argument as an array

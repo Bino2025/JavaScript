@@ -1,0 +1,22 @@
+<!-- when a mouse button pressed up -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="width : 150px; height: 150px; background: rgb(235, 160, 135);"></div>
+
+
+    <script>
+        document.getElementById("box").addEventListener("mouseenter",function(){
+            this.style.background="darkorange";
+            console.log("mouse entered..");
+            
+        })
+    </script>
+</body>
+</html>

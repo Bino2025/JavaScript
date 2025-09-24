@@ -1,0 +1,97 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #2196F3;
+      padding: 15px;
+      color: #fff;
+    }
+
+    .header h2 {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .header h2 span {
+      font-weight: bold;
+    }
+
+    .header button {
+      background: #fff;
+      color: #2196F3;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #f1f1f1;
+    }
+
+    tr:nth-child(even) {
+      background: #fafafa;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .user-info img {
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+    }
+
+    .status {
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .status.active { color: green; }
+    .status.inactive { color: goldenrod; }
+    .status.suspended { color: red; }
+
+    .action button {
+      border: none;
+      cursor: pointer;
+      padding: 6px;
+      border-radius: 4px;
+      margin-right: 5px;
+    }
+
+    .edit { background: #2196F3; color: white; }
+    .delete { background: #f44336; color: white; }
+
+ 

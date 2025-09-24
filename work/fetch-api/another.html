@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="./newStyle.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>User <span>Management</span></h2>
+            <div>
+                <button>Export to Excel</button>
+                <button>Add New User</button>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Date Created</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="userTable">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+            .then(res => res.json())
+            .then(users => {
+                const tbody = document.getElementById("userTable");
+
+                users.slice(0, 5).forEach((u, i) => {
+                    tbody.innerHTML += `
+          <tr>
+            <td>${i + 1}</td>
+            <td>
+              <div class="user-info">
+                <img src="https://i.pravatar.cc/150?img=${i + 1}" alt="avatar">
+                ${u.name}
+              </div>
+            </td>
+            <td>${new Date().toLocaleDateString()}</td>
+            <td>${["Admin", "Publisher", "Reviewer", "Moderator"][i % 4]}</td>
+            <td><span class="status ${["active", "inactive", "suspended"][i % 3]}">
+              ● ${["Active", "Inactive", "Suspended"][i % 3]}
+            </span></td>
+            <td class="action">
+              <button class="edit">⚙</button>
+              <button class="delete">✖</button>
+            </td>
+          </tr>`;
+                });
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!-- to remove the child from a parent -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>remove child</h2>
+    <div id="container">
+        <p id="child">Lorem ipsum dolor sit amet.</p>
+    </div>
+    <button onclick="removeChildElement()">bye bye!</button>
+    <script>
+        function removeChildElement(){
+            let parent=document.getElementById("container");
+            let childs=document.getElementById("child");
+            parent.removeChild(childs)
+        }
+    </script>
+</body>
+</html>

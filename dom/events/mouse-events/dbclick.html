@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dbl click</title>
+</head>
+<body>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+
+    <script>
+        document.getElementById("text").addEventListener("dblclick",function(){
+            this.style.background="red";
+            alert("para was dbl clicked!")
+        })
+    </script>
+</body>
+</html>

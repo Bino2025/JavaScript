@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 300px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label>Name:</label>
+        <input type="text" id="name" name="name">
+        <span class="error" id="nameError"></span>
+        <br> <br>
+
+        <label>Email:</label>
+        <input type="text" id="email" name="email">
+        <span class="error" id="emailError"></span>
+        <br> <br>
+
+        <label>Age:</label>
+        <input type="text" id="Age" name="Age">
+        <span class="error" id="AgeError"></span>
+        <br> <br>
+
+        <label>Gender:</label>
+        <select type="text" id="Gender" name="Gender">gender
+            <option value=""></option>
+            <option value="">male</option>
+            <option value="">female</option>
+        </select>
+        
+        <br> <br>
+
+        <label>password:</label>
+        <input type="text" id="password" name="password">
+        <span class="error" id="passwordError"></span>
+        <br> <br>
+
+        <label>confirmpassword:</label>
+        <input type="text" id="conform password" name="conform password">
+        <span class="error" id="conform passwordError"></span>
+        <br> <br>
+
+        <button type="submit">submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Clear previous errors
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("AgeError").innerText = "";
+            document.getElementById("GenderError").innerText = "";
+            document.getElementById("passwordError").innerText = "";
+            document.getElementById("conform passwordError").innerText = "";
+            let isValid = true;
+
+            // Name validation
+            const name = document.getElementById("name").value.trim();
+            if (name === "") {
+                document.getElementById("nameError").innerText = "Name is required";
+                isValid = false;
+            }
+
+            // Email validation
+            const email = document.getElementById("email").value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email === "") {
+                document.getElementById("emailError").innerText = "Email is required";
+                isValid = false;
+            }
+            // Age validation
+            const Age = document.getElementById("Age").value.trim();
+            if (Age === "") {
+                document.getElementById("AgeError").innerText = "Age is required";
+                isValid = false;
+            }
+            // gender validation
+            if (gender === "") {
+                document.getElementById("GenderError").innerText ="please select your gender";
+                isValid = false;
+            }
+            // password validation 
+            if (password === "") {
+                document.getElementById("passwordError").innerText = "password is required";
+                isValid = false;
+            }
+            // conform password validation
+            if (conformpassword !== password) {
+                document.getElementById("conform passwordError").innerText = "conform password is required";
+                isValid = false;
+            }
+            return isValid; // Prevent form submission if validation fails
+        }
+    </script>
+
+</body>
+
+</html>

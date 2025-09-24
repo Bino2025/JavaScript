@@ -1,0 +1,23 @@
+<!-- directly remove the element from the dom -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove</title>
+</head>
+<body>
+    <h2>Remoe Eg:</h2>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem?</p>
+    <button onclick="removeText()">Remove Text</button>
+
+    <script>
+        function removeText() {
+            let texts = document.getElementById("text");
+            texts.remove();//directly remove the element
+        }
+            
+    </script>
+</body>
+</html>

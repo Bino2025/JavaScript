@@ -1,0 +1,17 @@
+<!-- returns the visible text of an element (exclude display :none,visibility:hidden)-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerText</title>
+</head>
+<body>
+      <p id="para">Hello <span style="display: none;">World!</span></p>
+    <script>
+        let para=document.getElementById("para");
+        console.log(para.innerText);
+        
+    </script>
+</body>
+</html>

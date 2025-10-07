@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select</title>
+</head>
+<body>
+    <input type="text" id="msg" value="select some text!">
+<p id="out"></p>
+
+<script>
+  const msg = document.getElementById("msg");
+  const out = document.getElementById("out");
+
+  msg.addEventListener("select", () => {
+    out.innerText = `you selected text: ${msg.value.substring(msg.selectionStart, msg.selectionEnd)}`;
+  });
+</script>
+
+</body>
+</html>
+

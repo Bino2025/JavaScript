@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>change Event</title>
+</head>
+<body>
+  <label for="gender">Gender:</label>
+  <select name="gender" id="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+
+  <p id="output"></p>
+
+  <script>
+    const select = document.getElementById("gender");
+    const output = document.getElementById("output");
+
+    
+    select.addEventListener("change", (event) => {
+      output.innerText = `You selected: ${event.target.value}`;
+    });
+  </script>
+</body>
+</html>

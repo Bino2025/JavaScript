@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>play pause ended</title>
+</head>
+<body>
+    <h2>play/pause/ended</h2>
+
+    <audio id="audioplayer" controls>
+    <source src="./FREEZE! 4.0 - SUPER SLOWED.mp3">    
+    </audio>
+    <p id="msg">Event will appear here</p>
+
+    <script>
+        const audio =document.getElementById("audioplayer");
+        const output = document.getElementById("msg");
+
+        // play event
+        audio.addEventListener("play",()=>{
+            output.textContent="play event triggered";
+            console.log("play event fired");
+
+            
+        })
+
+        // pause event
+
+        audio.addEventListener("pause",()=>{
+            output.textContent="pause event fired!!";
+            console.log("pause event fired");
+
+            
+        })
+
+        // end event
+
+        audio.addEventListener("ended",()=>{
+            output.textContent="ended event triggered"
+            console.log("end event triggered");
+            
+        })
+    </script>
+</body>
+</html>

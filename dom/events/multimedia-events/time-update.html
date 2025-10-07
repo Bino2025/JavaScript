@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>time update</h2>
+
+    <audio id="timeupdate" controls>
+        <source src="./FREEZE! 4.0 - SUPER SLOWED.mp3">
+    </audio>
+    <p id="output">current time: 0</p>
+
+
+    <script>
+        const timeupdate=document.getElementById("timeupdate");
+        const output = document.getElementById("output")
+
+        timeupdate.addEventListener("timeupdate",()=>{
+            output.textContent="current time:"+timeupdate.currentTime.toFixed(2);
+        })
+    </script>
+</body>
+</html>

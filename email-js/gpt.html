@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ff9068, #fd746c);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contact-box {
+  display: flex;
+  width: 800px;
+  height: 450px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.left {
+  flex: 1;
+  background-color: #333;
+}
+
+.right {
+  flex: 1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+
+.info li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border: 1px solid #fd746c;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #fd746c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background: #ff9068;
+}
+  </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+/>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="contact-box">
+      
+      <div class="left">
+        <iframe src="https://maps.google.com/maps?q=Manhattan,%20NYC&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" style="width:100%;height:100%;border:0;"></iframe>
+      </div>
+
+      <div class="right">
+        <h2>Contact Us</h2>
+        <ul class="info">
+          <li><a href="https://wa.me/+919188373097">
+                    <i class="fa-brands fa-whatsapp"></i>Whatsapp</a> </li>
+          <li><a href="tel:+919188373097" ><i class="fa-solid fa-phone"></i>Phone</a></li>
+          <li><a href="mailto:binosha98@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>Email</a>
+                <form action=""></li>
+        </ul>
+        <form id="contact-form">
+          <input type="text" name="name" placeholder="Name" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <textarea name="message" placeholder="Message" required></textarea>
+          <button type="submit">SEND</button>
+        </form>
+        <p id="response-msg"></p>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function() {
+  emailjs.init("sRPGcTsgd3N9cBMJd"); // Replace with your EmailJS Public Key
+})();
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  emailjs.sendForm('service_kfndmbx', 'template_5enoxvp', this)
+    .then(function() {
+      document.getElementById('response-msg').innerHTML = "Message sent successfully!";
+    }, function(error) {
+      document.getElementById('response-msg').innerHTML = "Failed to send message. Try again.";
+      console.error("FAILED...", error);
+    });
+
+  this.reset();
+});
+  </script>
+
+  
+</body>
+</html>
